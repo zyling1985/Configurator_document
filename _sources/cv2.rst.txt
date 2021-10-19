@@ -1,0 +1,17 @@
+Image Processing:OpenCV
+************************************
+
+
+.. |.| raw:: html
+
+   <br />
+
+
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.VideoInput
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.ImageInput
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.RegionOfImage
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Draw   
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Operation
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Transfer
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Color
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Filter

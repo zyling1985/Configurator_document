@@ -6,13 +6,14 @@
 Welcome to configurator's documentation!
 ========================================
 
-.. autoclass:: excel_blocks.excel_blocks::ExcelImpy.AddColumnItem
-
-.. autoclass:: excel_blocks.excel_blocks::ExcelImpy.Setup
-
+System Documentation
+====================
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+   cv2
+   excel
 
 
 
