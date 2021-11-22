@@ -1,17 +1,30 @@
-Image Processing:OpenCV
+cv2
 ************************************
 
-
 .. |.| raw:: html
-
    <br />
-
-
-.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.VideoInput
-.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.ImageInput
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Input
 .. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.RegionOfImage
-.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Draw   
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Draw
 .. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Operation
 .. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Transfer
 .. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Color
 .. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Filter
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Enhance
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Binary
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Morphology
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Contour
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.DigitalNumberRecognition
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.SevenSegmentDisplaySegment
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Match
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.HoughTranform
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Component
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.FeatureMatch
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Tag
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Debug
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Save
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Cartoonizer
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Braid
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Qrcode
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.Formbox
+.. autoclass:: cv2_blocks.cv2_blocks::Cv2Impy.PreProcess

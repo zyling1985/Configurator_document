@@ -1,0 +1,8 @@
+rpi
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: rpi_blocks.rpi_blocks::RpiImpy.Temperature
+.. autoclass:: rpi_blocks.rpi_blocks::RpiImpy.LightSensor
+.. autoclass:: rpi_blocks.rpi_blocks::RpiImpy.Camerapi

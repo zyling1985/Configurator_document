@@ -1,0 +1,7 @@
+control
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: control_blocks.control_blocks::ControlImpy.Controller
+.. autoclass:: control_blocks.control_blocks::ControlImpy.LedDriver

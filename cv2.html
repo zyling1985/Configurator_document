@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Image Processing:OpenCV &mdash; configurator 0.1 documentation</title>
+  <title>cv2 &mdash; configurator 0.1 documentation</title>
   
 
   
@@ -42,7 +42,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Database:Excel" href="excel.html" />
+    <link rel="next" title="excel" href="excel.html" />
     <link rel="prev" title="Welcome to configurator’s documentation!" href="index.html" /> 
 </head>
 
@@ -90,8 +90,19 @@
             
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Image Processing:OpenCV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="excel.html">Database:Excel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">cv2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="excel.html">excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grafana.html">grafana</a></li>
+<li class="toctree-l1"><a class="reference internal" href="influx.html">influx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro.html">micro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notify.html">notify</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot.html">plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rpi.html">rpi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scikit.html">scikit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signal.html">signal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="control.html">control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="django.html">django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sql.html">sql</a></li>
 </ul>
 
             
@@ -140,7 +151,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Image Processing:OpenCV</li>
+      <li>cv2</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -159,48 +170,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="image-processing-opencv">
-<h1>Image Processing:OpenCV<a class="headerlink" href="#image-processing-opencv" title="Permalink to this headline">¶</a></h1>
+  <section id="cv2">
+<h1>cv2<a class="headerlink" href="#cv2" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.VideoInput">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">VideoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.VideoInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a new call with the agent.
-Works through  policy &gt; semo – for turn 0
-Start domain is used if external topic tracking is used.</p>
-<p>Input consists of a n-best list of either ASR hypotheses (with confidence) or (mostly only in case of simulation) pre-interpreted DiaActWithProb objects.</p>
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Input">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input images and videos from a local file or a camera [‘image_from_upload’,’image_from_file’,’video_from_file’,’video_from_camera’]</p>
 <dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>none</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>session_id</strong> (<em>string</em>) – session id</p></li>
-<li><p><strong>domainSimulatedUsers</strong> (<em>dict</em>) – simulated users in different domains</p></li>
-<li><p><strong>maxNumTurnsScaling</strong> (<em>float</em>) – controls the variable turn numbers allowed in a dialog, based on how many domains are involved (used only for simulate)</p></li>
-<li><p><strong>start_domain</strong> (<em>str</em>) – used by DialPort/external topictracking with DialogueServer to hand control to certain domain</p></li>
+<li><p><strong>path</strong> (<em>string</em>) – file path</p></li>
+<li><p><strong>channel</strong> (<em>int</em>) – camera channel, defaut 0</p></li>
+<li><p><strong>rotate</strong> (<em>DropDown</em>) – rotate image 0, 90, 180, 270</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string – the system’s reponse</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.ImageInput">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">ImageInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.ImageInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a new call with the agent.
-Works through  policy &gt; semo – for turn 0
-Start domain is used if external topic tracking is used.</p>
-<p>Input consists of a n-best list of either ASR hypotheses (with confidence) or (mostly only in case of simulation) pre-interpreted DiaActWithProb objects.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>session_id</strong> (<em>string</em>) – session id</p></li>
-<li><p><strong>domainSimulatedUsers</strong> (<em>dict</em>) – simulated users in different domains</p></li>
-<li><p><strong>maxNumTurnsScaling</strong> (<em>float</em>) – controls the variable turn numbers allowed in a dialog, based on how many domains are involved (used only for simulate)</p></li>
-<li><p><strong>start_domain</strong> (<em>str</em>) – used by DialPort/external topictracking with DialogueServer to hand control to certain domain</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string – the system’s reponse</p>
 </dd>
 </dl>
 </dd></dl>
@@ -208,43 +196,54 @@ Start domain is used if external topic tracking is used.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.RegionOfImage">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">RegionOfImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.RegionOfImage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a new call with the agent.
-Works through  policy &gt; semo – for turn 0
-Start domain is used if external topic tracking is used.</p>
-<p>Input consists of a n-best list of either ASR hypotheses (with confidence) or (mostly only in case of simulation) pre-interpreted DiaActWithProb objects.</p>
+<dd><p>set region of image (interest) [‘rectangle’,’draw_rectangle’,’circle’,’single_contour’]</p>
 <dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>session_id</strong> (<em>string</em>) – session id</p></li>
-<li><p><strong>domainSimulatedUsers</strong> (<em>dict</em>) – simulated users in different domains</p></li>
-<li><p><strong>maxNumTurnsScaling</strong> (<em>float</em>) – controls the variable turn numbers allowed in a dialog, based on how many domains are involved (used only for simulate)</p></li>
-<li><p><strong>start_domain</strong> (<em>str</em>) – used by DialPort/external topictracking with DialogueServer to hand control to certain domain</p></li>
+<li><p><strong>x1</strong> (<em>int</em>) – left-top corner</p></li>
+<li><p><strong>y1</strong> (<em>int</em>) – left-top corner</p></li>
+<li><p><strong>x2</strong> (<em>int</em>) – right-bottom corner</p></li>
+<li><p><strong>y2</strong> (<em>int</em>) – right-bottom corner</p></li>
+<li><p><strong>second_img</strong> (<em>image</em>) – message name of the second image from a building block, make sure that two images have same size</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string – the system’s reponse</p>
-</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Draw">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Draw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a new call with the agent.
-Works through  policy &gt; semo – for turn 0
-Start domain is used if external topic tracking is used.</p>
-<p>Input consists of a n-best list of either ASR hypotheses (with confidence) or (mostly only in case of simulation) pre-interpreted DiaActWithProb objects.</p>
+<dd><p>Draw different geometric shapes or add text on the image [‘line’,’rectangle’,’circle’,’ellipse’,’text’]</p>
 <dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>session_id</strong> (<em>string</em>) – session id</p></li>
-<li><p><strong>domainSimulatedUsers</strong> (<em>dict</em>) – simulated users in different domains</p></li>
-<li><p><strong>maxNumTurnsScaling</strong> (<em>float</em>) – controls the variable turn numbers allowed in a dialog, based on how many domains are involved (used only for simulate)</p></li>
-<li><p><strong>start_domain</strong> (<em>str</em>) – used by DialPort/external topictracking with DialogueServer to hand control to certain domain</p></li>
+<li><p><strong>x1</strong> (<em>int</em>) – left-top corner</p></li>
+<li><p><strong>y1</strong> (<em>int</em>) – left-top corner</p></li>
+<li><p><strong>x2</strong> (<em>int</em>) – right-bottom corner</p></li>
+<li><p><strong>y2</strong> (<em>int</em>) – right-bottom corner</p></li>
+<li><p><strong>radius</strong> (<em>float</em>) – radius</p></li>
+<li><p><strong>long</strong> (<em>float</em>) – long axis of ellipse</p></li>
+<li><p><strong>short</strong> (<em>float</em>) – short axis of ellipse</p></li>
+<li><p><strong>text</strong> (<em>string</em>) – text</p></li>
+<li><p><strong>size</strong> (<em>float</em>) – font size</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string – the system’s reponse</p>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_gui/py_drawing_functions/py_drawing_functions.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_gui/py_drawing_functions/py_drawing_functions.html</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -252,43 +251,42 @@ Start domain is used if external topic tracking is used.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Operation">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Operation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a new call with the agent.
-Works through  policy &gt; semo – for turn 0
-Start domain is used if external topic tracking is used.</p>
-<p>Input consists of a n-best list of either ASR hypotheses (with confidence) or (mostly only in case of simulation) pre-interpreted DiaActWithProb objects.</p>
+<dd><p>pixel level opeartion of two images [‘addWeighted’,’bitwise_and’,’bitwise_or’,’bitwise_xor’,’bitwise_not’]</p>
 <dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>session_id</strong> (<em>string</em>) – session id</p></li>
-<li><p><strong>domainSimulatedUsers</strong> (<em>dict</em>) – simulated users in different domains</p></li>
-<li><p><strong>maxNumTurnsScaling</strong> (<em>float</em>) – controls the variable turn numbers allowed in a dialog, based on how many domains are involved (used only for simulate)</p></li>
-<li><p><strong>start_domain</strong> (<em>str</em>) – used by DialPort/external topictracking with DialogueServer to hand control to certain domain</p></li>
-</ul>
+<dd class="field-odd"><p><strong>second_img</strong> (<em>image</em>) – message name of the second image from a building block, make sure that two images have same size</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string – the system’s reponse</p>
-</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Transfer">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Transfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Transfer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a new call with the agent.
-Works through  policy &gt; semo – for turn 0
-Start domain is used if external topic tracking is used.</p>
-<p>Input consists of a n-best list of either ASR hypotheses (with confidence) or (mostly only in case of simulation) pre-interpreted DiaActWithProb objects.</p>
+<dd><p>some transfer functions [‘scaling’,’FFT’,’shapeListToImage’,’reactangleToSquare’,’crop_center_region’,’pyramids’]</p>
+<p>‘shapeListToImage’need to remove, input is a list not an image</p>
 <dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>session_id</strong> (<em>string</em>) – session id</p></li>
-<li><p><strong>domainSimulatedUsers</strong> (<em>dict</em>) – simulated users in different domains</p></li>
-<li><p><strong>maxNumTurnsScaling</strong> (<em>float</em>) – controls the variable turn numbers allowed in a dialog, based on how many domains are involved (used only for simulate)</p></li>
-<li><p><strong>start_domain</strong> (<em>str</em>) – used by DialPort/external topictracking with DialogueServer to hand control to certain domain</p></li>
+<li><p><strong>width</strong> (<em>int</em>) – scale of width</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – scale of width</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string – the system’s reponse</p>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_transforms/py_fourier_transform/py_fourier_transform.html#fourier-transform">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_transforms/py_fourier_transform/py_fourier_transform.html#fourier-transform</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -296,21 +294,22 @@ Start domain is used if external topic tracking is used.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Color">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Color" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a new call with the agent.
-Works through  policy &gt; semo – for turn 0
-Start domain is used if external topic tracking is used.</p>
-<p>Input consists of a n-best list of either ASR hypotheses (with confidence) or (mostly only in case of simulation) pre-interpreted DiaActWithProb objects.</p>
+<dd><p>change image color [‘grey’,’inverse’,’HSV’,’HSV_red’,’HSV_green’,’HSV_blue’,’HSV_define’]</p>
 <dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>session_id</strong> (<em>string</em>) – session id</p></li>
-<li><p><strong>domainSimulatedUsers</strong> (<em>dict</em>) – simulated users in different domains</p></li>
-<li><p><strong>maxNumTurnsScaling</strong> (<em>float</em>) – controls the variable turn numbers allowed in a dialog, based on how many domains are involved (used only for simulate)</p></li>
-<li><p><strong>start_domain</strong> (<em>str</em>) – used by DialPort/external topictracking with DialogueServer to hand control to certain domain</p></li>
+<li><p><strong>lower_r</strong> (<em>int</em>) – </p></li>
+<li><p><strong>upper_r</strong> (<em>int</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string – the system’s reponse</p>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_colorspaces/py_colorspaces.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_colorspaces/py_colorspaces.html</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -318,8 +317,335 @@ Start domain is used if external topic tracking is used.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Filter">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>An videoInput class.</p>
+<dd><p>Blur imagess with various low pass filters [‘2dConvolution’,’Averaging’,’Gaussian’,’Median’,’Bilateral’]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ksize</strong> (<em>int</em>) – </p></li>
+<li><p><strong>var1</strong> (<em>int</em>) – for Bilateral Filtering</p></li>
+<li><p><strong>var2</strong> (<em>int</em>) – for Bilateral Filtering</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html</a></p>
+</dd>
+</dl>
 </dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Enhance">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Enhance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Enhance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ehance image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Binary">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image thresholding[‘globalThreshold’,’adaptiveThreshold’,’Otsu’]
+Image gradients [‘Sobel’,’Laplacian’,’Canny’]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
+</dl>
+<p>:param threshold:[0-255]
+:type threshold: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>adjustment</strong> (<em>int</em>) – adaptiveThreshold</p></li>
+<li><p><strong>adaptiveMethod</strong> (<em>Dropdown</em>) – adaptiveThreshold</p></li>
+<li><p><strong>ksize</strong> (<em>int</em>) – kernal size</p></li>
+<li><p><strong>var1</strong> (<em>int</em>) – Canny</p></li>
+<li><p><strong>var2</strong> (<em>int</em>) – Canny</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html</a></p>
+</dd>
+<dt class="field-odd">Ref</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_gradients/py_gradients.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_gradients/py_gradients.html</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Morphology">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Morphology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Morphology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Morphological Transformations for white color (foreground)[‘Erosion’,’Dilation’,’morphologyEx’]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ksize</strong> (<em>int</em>) – kernel size</p></li>
+<li><p><strong>iter</strong> (<em>int</em>) – iterative times</p></li>
+<li><p><strong>method</strong> (<em>DropDown</em>) – [‘open’,’close’,’gradient’]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Contour">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Contour" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image contour [‘contour’,’contour_shape’,’contour_center’]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,shape_img_list],[]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var1</strong> (<em>Dropdown</em>) – </p></li>
+<li><p><strong>var2</strong> (<em>Dropdown</em>) – </p></li>
+<li><p><strong>largeArea</strong> (<em>int</em>) – remove small area contour</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_contours/py_table_of_contents_contours/py_table_of_contents_contours.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_contours/py_table_of_contents_contours/py_table_of_contents_contours.html</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.DigitalNumberRecognition">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">DigitalNumberRecognition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.DigitalNumberRecognition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recognize a digit [‘template’,’knn’,’deep_learning’]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘float’,number]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.SevenSegmentDisplaySegment">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">SevenSegmentDisplaySegment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.SevenSegmentDisplaySegment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Segment a seven segment display</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘img’,img_crop_list]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num</strong> (<em>int</em>) – number of digit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Match">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Template match</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>template_img</strong> (<em>an image message from a buling block</em>) – </p>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_template_matching/py_template_matching.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_template_matching/py_template_matching.html</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.HoughTranform">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">HoughTranform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.HoughTranform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hough Transform to detect any shape [‘line’,’circle’,’lineP’]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var1</strong> (<em>int</em>) – </p></li>
+<li><p><strong>num</strong> (<em>int</em>) – </p></li>
+<li><p><strong>minLineLength</strong> (<em>int</em>) – </p></li>
+<li><p><strong>maxLineGap</strong> (<em>int</em>) – </p></li>
+<li><p><strong>param1</strong> (<em>int</em>) – </p></li>
+<li><p><strong>param2</strong> (<em>int</em>) – </p></li>
+<li><p><strong>minRadius</strong> (<em>int</em>) – </p></li>
+<li><p><strong>maxRadius</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html</a></p>
+</dd>
+<dt class="field-odd">Ref</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghcircles/py_houghcircles.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghcircles/py_houghcircles.html</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Component">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leagcy panel data extraction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>out</strong> (<em>Dropdown</em>) – [‘img’,’detection’,’description’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.FeatureMatch">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">FeatureMatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.FeatureMatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Feature match</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>out</strong> (<em>Dropdown</em>) – [‘img’,’detection’,’description’]</p>
+</dd>
+<dt class="field-even">Ref</dt>
+<dd class="field-even"><p><a class="reference external" href="https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html">https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Tag">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tag images</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Debug">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Debug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Debug" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Save">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save image or video</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Cartoonizer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Cartoonizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Cartoonizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cartoonizer an image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Braid">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Braid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Braid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Braid angle measurement</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Qrcode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Qrcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Qrcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>QRcode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>[‘img’,image]</p>
+</dd>
+<dt class="field-even">Output</dt>
+<dd class="field-even"><p>[‘img’,image],[‘list’,results]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.Formbox">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">Formbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.Formbox" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cv2_blocks.cv2_blocks.Cv2Impy.PreProcess">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Cv2Impy.</span></span><span class="sig-name descname"><span class="pre">PreProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2_blocks.cv2_blocks.Cv2Impy.PreProcess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </section>
 
@@ -329,7 +655,7 @@ Start domain is used if external topic tracking is used.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="excel.html" class="btn btn-neutral float-right" title="Database:Excel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="excel.html" class="btn btn-neutral float-right" title="excel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to configurator’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

@@ -1,0 +1,7 @@
+grafana
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: grafana_blocks.grafana_blocks::GrafanaImpy.Panel
+.. autoclass:: grafana_blocks.grafana_blocks::GrafanaImpy.Setup

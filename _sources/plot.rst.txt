@@ -1,0 +1,7 @@
+plot
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: plot_blocks.plot_blocks::PlotImpy.Add
+.. autoclass:: plot_blocks.plot_blocks::PlotImpy.Display

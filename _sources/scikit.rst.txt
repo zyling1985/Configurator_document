@@ -1,0 +1,19 @@
+scikit
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.DataLoad
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.DataSplit
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.Preprocess
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.Classification
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.Regression
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.LogisticRegression
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.Cluster
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.DimensionalityReduction
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.SaveModel
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.Evaluation
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.Prediction
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.ShowTable
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.ShowMsg
+.. autoclass:: scikit_blocks.scikit_blocks::ScikitImpy.ShowFig

@@ -14,7 +14,17 @@ System Documentation
 
    cv2
    excel
-
+   grafana
+   influx
+   micro
+   notify
+   plot
+   rpi
+   scikit
+   signal
+   control
+   django
+   sql
 
 
 Indices and tables

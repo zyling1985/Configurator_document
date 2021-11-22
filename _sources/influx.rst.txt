@@ -1,0 +1,7 @@
+influx
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: influx_blocks.influx_blocks::InfluxImpy.AddData
+.. autoclass:: influx_blocks.influx_blocks::InfluxImpy.Setup

@@ -1,0 +1,7 @@
+django
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: django_blocks.django_blocks::DjangoImpy.AddItem
+.. autoclass:: django_blocks.django_blocks::DjangoImpy.Generate

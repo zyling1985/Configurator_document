@@ -1,0 +1,7 @@
+sql
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: sql_blocks.sql_blocks::SqlImpy.AddData
+.. autoclass:: sql_blocks.sql_blocks::SqlImpy.Setup

@@ -1,12 +1,9 @@
-Database:Excel
+excel
 ************************************
 
-
 .. |.| raw:: html
-
    <br />
-
-
 .. autoclass:: excel_blocks.excel_blocks::ExcelImpy.AddColumnItem
 .. autoclass:: excel_blocks.excel_blocks::ExcelImpy.Setup
-    
+.. autoclass:: excel_blocks.excel_blocks::ExcelImpy.OpenFile
+.. autoclass:: excel_blocks.excel_blocks::ExcelImpy.ReadData

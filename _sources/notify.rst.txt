@@ -1,0 +1,7 @@
+notify
+************************************
+
+.. |.| raw:: html
+   <br />
+.. autoclass:: notify_blocks.notify_blocks::NotifyImpy.EmailMsg
+.. autoclass:: notify_blocks.notify_blocks::NotifyImpy.EmailSend
